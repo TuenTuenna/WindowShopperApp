@@ -7,4 +7,5 @@ you can calculate how much hours you gotta work to get your wishing item.
 - added custom ui button
 - added model unit testing
 
-![windowShopperApp](https://user-images.githubusercontent.com/35421421/60325910-70b39300-99c3-11e9-935c-aebe93d4d878.gif)
+![windowShopperApp](https://user-images.githubusercontent.com/35421421/60330002-73ff4c80-99cc-11e9-939c-ae8ad0a23efc.gif)
+
