@@ -1,5 +1,8 @@
 # WindowShopperApp
 
+### usage 
+you can calculate how much hours to work to get your wishing item. 
+
 - added custom textField
 - added custom ui button
 
