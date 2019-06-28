@@ -15,6 +15,12 @@ class MainVC: UIViewController {
     // 사고싶은 물건 가격 텍스트필드
     @IBOutlet weak var priceTxt: CurrencyTextField!
     
+    // 계산 결과 레이블
+    @IBOutlet weak var resultLbl: UILabel!
+    // 시간 레이블
+    @IBOutlet weak var hoursLbl: UILabel!
+    
+    
     // 뷰가 로드되었을 때
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,13 +36,36 @@ class MainVC: UIViewController {
         wageTxt.inputAccessoryView = calcBtn
         priceTxt.inputAccessoryView = calcBtn
         
+        resultLbl.isHidden = true
+        hoursLbl.isHidden = true
     }
 
     // #selector 는 objective-c 런타임을 사용하기 때문에 @objc 키워드를 사용해야한다.
     @objc func calculate() {
         NSLog("calculate(): %@", "계산 버튼이 클릭되었다!")
+        
+        // nil 이 아니면
+        if let wageTxt = wageTxt.text, let priceTxt = priceTxt.text {
+            // 형변환 이상없으면
+            if let wage = Double(wageTxt), let price = Double(priceTxt){
+                // 키보드 없애기
+                view.endEditing(true)
+                resultLbl.isHidden = false
+                hoursLbl.isHidden = false
+                // 계산결과 ui에 적용
+                resultLbl.text = "\(Wage.getHours(forWage: wage, andPrice: price))"
+                
+            }
+        }
+        
     }
     
-
+    @IBAction func clearCalculatorPressed(_ sender: Any) {
+        resultLbl.isHidden = true
+        hoursLbl.isHidden = true
+        wageTxt.text = ""
+        priceTxt.text = ""
+    }
+    
 }
 
