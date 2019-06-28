@@ -21,7 +21,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="windowShopperBG" translatesAutoresizingMaskIntoConstraints="NO" id="sW0-5N-dnF">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="windowShopperIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Cmm-Y3-tJ3">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Cmm-Y3-tJ3">
                                 <rect key="frame" x="157.5" y="55" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="7AB-gB-Inv"/>
@@ -46,20 +46,57 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6nu-cj-04a">
+                                <rect key="frame" x="20" y="285" width="335" height="62.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="52"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hours" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z4H-NW-Dub">
+                                <rect key="frame" x="124.5" y="352.5" width="126" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="Km2-aX-dww"/>
+                                    <constraint firstAttribute="width" constant="126" id="T1u-OJ-Pac"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o74-9r-ch9">
+                                <rect key="frame" x="20" y="597" width="335" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="YiC-Kp-HXM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="입력 지우기">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearCalculatorPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L2q-hA-hQf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ZPm-ez-9eG" firstAttribute="top" secondItem="Cmm-Y3-tJ3" secondAttribute="bottom" constant="20" id="0Rb-G8-3Y7"/>
                             <constraint firstItem="sW0-5N-dnF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1Av-ZI-Iz8"/>
                             <constraint firstItem="sW0-5N-dnF" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="3yU-ko-atS"/>
+                            <constraint firstItem="o74-9r-ch9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="9wg-Vc-44w"/>
                             <constraint firstItem="sW0-5N-dnF" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="DjG-gK-reW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="o74-9r-ch9" secondAttribute="trailing" constant="20" id="Dmt-7l-Oe2"/>
+                            <constraint firstItem="z4H-NW-Dub" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="G6Q-wz-3eq"/>
                             <constraint firstItem="rBB-67-L8M" firstAttribute="leading" secondItem="ZPm-ez-9eG" secondAttribute="leading" id="SMs-AE-xQv"/>
                             <constraint firstItem="rBB-67-L8M" firstAttribute="trailing" secondItem="ZPm-ez-9eG" secondAttribute="trailing" id="XFb-jL-Ih1"/>
                             <constraint firstItem="ZPm-ez-9eG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Y7A-07-1cl"/>
                             <constraint firstItem="ZPm-ez-9eG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YuY-aD-4Ku"/>
                             <constraint firstItem="rBB-67-L8M" firstAttribute="height" secondItem="ZPm-ez-9eG" secondAttribute="height" id="ZFq-GL-NU9"/>
+                            <constraint firstItem="6nu-cj-04a" firstAttribute="top" secondItem="rBB-67-L8M" secondAttribute="bottom" constant="45" id="ZfE-iF-XBw"/>
+                            <constraint firstItem="6nu-cj-04a" firstAttribute="width" secondItem="rBB-67-L8M" secondAttribute="width" id="bOW-Dp-V5f"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="o74-9r-ch9" secondAttribute="bottom" constant="20" id="c18-Mw-fSi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZPm-ez-9eG" secondAttribute="trailing" constant="20" id="fBY-EW-aaQ"/>
                             <constraint firstItem="rBB-67-L8M" firstAttribute="top" secondItem="ZPm-ez-9eG" secondAttribute="bottom" constant="25" id="fQc-bC-Mxg"/>
+                            <constraint firstItem="6nu-cj-04a" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="i9z-XL-8Tp"/>
+                            <constraint firstItem="z4H-NW-Dub" firstAttribute="top" secondItem="6nu-cj-04a" secondAttribute="bottom" constant="5" id="mMR-mb-3qc"/>
                             <constraint firstItem="Cmm-Y3-tJ3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qJE-U1-yOZ"/>
                             <constraint firstItem="sW0-5N-dnF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="xBb-Dk-gjP"/>
                             <constraint firstItem="Cmm-Y3-tJ3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="xgT-FL-gSF"/>
@@ -67,7 +104,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="hoursLbl" destination="z4H-NW-Dub" id="kSL-c8-LqE"/>
                         <outlet property="priceTxt" destination="rBB-67-L8M" id="6f2-Qb-IHJ"/>
+                        <outlet property="resultLbl" destination="6nu-cj-04a" id="FWU-Dh-wDJ"/>
                         <outlet property="wageTxt" destination="ZPm-ez-9eG" id="8Hk-hx-aYm"/>
                     </connections>
                 </viewController>
@@ -77,7 +116,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="logo" width="332" height="335"/>
         <image name="windowShopperBG" width="414" height="736"/>
-        <image name="windowShopperIcon" width="115" height="115"/>
     </resources>
 </document>
