@@ -12,7 +12,36 @@ import UIKit
 // @IBDesignable 인터페이스를 사용한다.
 @IBDesignable
 class CurrencyTextField: UITextField {
+    
+    // 그린다.
+    override func draw(_ rect: CGRect) {
+        let size: CGFloat = 20
+        // x, y 포지션, 가로크기, 세로크리
+        let currencyLbl = UILabel(frame: CGRect(x: 5, y: (frame.size.height / 2) - size / 2, width: size, height: size))
+        currencyLbl.backgroundColor = #colorLiteral(red: 0.9069836612, green: 0.9069836612, blue: 0.9069836612, alpha: 0.8101990582)
+        currencyLbl.textAlignment = .center
+        currencyLbl.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        currencyLbl.layer.cornerRadius = 5.0
+        
+        currencyLbl.clipsToBounds = true
+        
+        // 숫자 포맷
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        
+        formatter.locale = .current
+        currencyLbl.text = formatter.currencySymbol
 
+        // 뷰에 추가한다.
+        addSubview(currencyLbl)
+    }
+    
+    
+
+    
+  
+    
+    
     // IBDesignable 인터페이스에 있는 함수를 호출함으로써
     // 인터페이스 빌더에서 변경되는 사항들을 런타임으로 바로 볼수 있다.
     override func prepareForInterfaceBuilder() {
@@ -36,6 +65,9 @@ class CurrencyTextField: UITextField {
         layer.cornerRadius = 5.0
         // 가운데 정렬
         textAlignment = .center
+        
+        //
+        clipsToBounds = true
         
         //        // 플레이스 홀더가 없으면
         //        // nil 체크
