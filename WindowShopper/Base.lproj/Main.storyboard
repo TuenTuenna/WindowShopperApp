@@ -75,7 +75,7 @@
                                     <action selector="clearCalculatorPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L2q-hA-hQf"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="일해야 물건을 살 수 있습니다." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uzf-p2-PT2">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="일해야 물건을 살 수 있습니다." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uzf-p2-PT2">
                                 <rect key="frame" x="16" y="415" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -114,6 +114,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="commentLbl" destination="uzf-p2-PT2" id="0X9-LE-33T"/>
                         <outlet property="hoursLbl" destination="z4H-NW-Dub" id="kSL-c8-LqE"/>
                         <outlet property="priceTxt" destination="rBB-67-L8M" id="6f2-Qb-IHJ"/>
                         <outlet property="resultLbl" destination="6nu-cj-04a" id="FWU-Dh-wDJ"/>

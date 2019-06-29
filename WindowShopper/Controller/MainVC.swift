@@ -19,7 +19,8 @@ class MainVC: UIViewController {
     @IBOutlet weak var resultLbl: UILabel!
     // 시간 레이블
     @IBOutlet weak var hoursLbl: UILabel!
-    
+    // 설명 레이블
+    @IBOutlet weak var commentLbl: UILabel!
     
     // 뷰가 로드되었을 때
     override func viewDidLoad() {
@@ -41,6 +42,7 @@ class MainVC: UIViewController {
         
         resultLbl.isHidden = true
         hoursLbl.isHidden = true
+        commentLbl.isHidden = true
         
         
     }
@@ -62,6 +64,7 @@ class MainVC: UIViewController {
                 view.endEditing(true)
                 resultLbl.isHidden = false
                 hoursLbl.isHidden = false
+                commentLbl.isHidden = false
                 // 계산결과 ui에 적용
                 resultLbl.text = "\(Wage.getHours(forWage: wage, andPrice: price))"
                 
@@ -73,6 +76,7 @@ class MainVC: UIViewController {
     @IBAction func clearCalculatorPressed(_ sender: Any) {
         resultLbl.isHidden = true
         hoursLbl.isHidden = true
+        commentLbl.isHidden = true
         wageTxt.text = ""
         priceTxt.text = ""
     }
